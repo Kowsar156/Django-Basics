@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+        <h2>You are {{ Name }} and you are in Home Page</h2>
+        <h4>Your E-mail is {{ Email }}</h4>
+        {% for contact in Contacts %}
+        <h4>Contact Name: {{ contact.Name }}</h4>
+        <h5>Contact Mail: {{ contact.Email }}</h5>
+        {% if contact.Email == 'shs@gmail.com' %}
+        <h4>I love you!</h4>
+        {% else %}
+        <h4>Meh!</h4>
+        {% endif %}
+        {% endfor %}
+        <a href='{% url 'login' %}'>Login</a>
+        <a href='{% url 'signup' %}'>Signup</a>
+        <img src="{% static 'worldcup.png' %}">
+    {% endblock content %}
+    

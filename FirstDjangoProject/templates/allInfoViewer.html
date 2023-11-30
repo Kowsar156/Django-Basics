@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Info Viewer</title>
+    </head>
+    <body bgcolor="cyan">
+        {% for student in students %}
+            <h2 align="center">{{ student.name }}</h2> 
+            <h4 align="center">Class: {{ student.cls }}</h4>
+            <h4 align="center">Roll: {{ student.roll }}</h4>
+        {% endfor %}
+    </body>
+</html>
